@@ -30,10 +30,6 @@ public class TC_VT_001_Test extends BaseClass {
 		
 		createContactPage con=new createContactPage(driver);
 		con.getLastName().sendKeys(eUtil.getStringDataFromExcel("Sheet2", 1, 1));
-		con.getOrganizationButton().click();
-		wUtil.switchToWindow(driver, "module=Accounts");
-		wUtil.mouseHover(driver, driver.findElement(By.xpath("//tr[@class='lvtColData']")));
-		wUtil.swithcBackToMainPage(driver);
 		con.getSaveButton().click();
 		
 		Assert.assertTrue(con.getHeading().getText().contains(eUtil.getStringDataFromExcel("Sheet2", 1, 1)), "contact not created");
