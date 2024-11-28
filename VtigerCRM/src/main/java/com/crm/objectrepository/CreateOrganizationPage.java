@@ -21,6 +21,12 @@ public class CreateOrganizationPage {
 	@FindBy(xpath ="//span[@class=\"lvtHeaderText\"]")
 	private WebElement heading;
 	
+	@FindBy(xpath = "//select[@name='industry']")
+	private WebElement industryDropdown;
+	
+	@FindBy(id="dtlview_Industry")
+	private WebElement industryField;
+	
 	public CreateOrganizationPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
@@ -44,6 +50,15 @@ public class CreateOrganizationPage {
 	public WebElement getHeading() {
 		return heading;
 	}
+
+	public WebElement getIndustryDropdown() {
+		return industryDropdown;
+	}
+
+	public WebElement getIndustryField() {
+		return industryField;
+	}
+
 	
 	
 	

@@ -102,6 +102,10 @@ public class WebDriverUtility {
 		Select sel=new Select(element);
 		sel.selectByValue(value);
 	}
+	public void selectDropdownByVisibleText(WebElement element,String text) {
+		Select sel=new Select(element);
+		sel.selectByValue(text);
+	}
 	
 	public Alert switchToAlert(WebDriver driver) {
 		return driver.switchTo().alert();
